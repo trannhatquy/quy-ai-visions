@@ -68,13 +68,13 @@ const Hero = () => {
           
           {/* Social Links */}
           <div className="flex justify-center gap-6">
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors p-2 hover:scale-110 transform transition-transform">
+            <a href="https://github.com/trannhatquy" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors p-2 hover:scale-110 transform transition-transform">
               <Github className="h-6 w-6" />
             </a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors p-2 hover:scale-110 transform transition-transform">
+            <a href="https://www.linkedin.com/in/tran-nhat-quy-16b25720b/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors p-2 hover:scale-110 transform transition-transform">
               <Linkedin className="h-6 w-6" />
             </a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors p-2 hover:scale-110 transform transition-transform">
+            <a href="mailto:quymyhungill@gmail.com" className="text-muted-foreground hover:text-primary transition-colors p-2 hover:scale-110 transform transition-transform">
               <Mail className="h-6 w-6" />
             </a>
           </div>

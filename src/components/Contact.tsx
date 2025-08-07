@@ -10,8 +10,8 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "tran.nhatquy@email.com",
-      href: "mailto:tran.nhatquy@email.com"
+      value: "quymyhungill@gmail.com",
+      href: "mailto:quymyhungill@gmail.com"
     },
     {
       icon: Phone,
@@ -31,13 +31,13 @@ const Contact = () => {
     {
       icon: Github,
       title: "GitHub",
-      href: "https://github.com/",
+      href: "https://github.com/trannhatquy",
       color: "hover:text-gray-800"
     },
     {
       icon: Linkedin,
       title: "LinkedIn",
-      href: "https://linkedin.com/in/",
+      href: "https://www.linkedin.com/in/tran-nhat-quy-16b25720b/",
       color: "hover:text-blue-600"
     }
   ];
