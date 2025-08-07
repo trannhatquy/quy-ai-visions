@@ -43,8 +43,15 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-background">
-      <div className="container mx-auto px-6">
+    <section id="contact" className="py-20 bg-background relative overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-1/4 w-2 h-2 bg-primary rounded-full animate-ping"></div>
+        <div className="absolute top-40 right-1/3 w-1 h-1 bg-primary/60 rounded-full animate-pulse delay-500"></div>
+        <div className="absolute bottom-32 left-1/3 w-3 h-3 bg-primary/40 rounded-full animate-bounce delay-1000"></div>
+      </div>
+      
+      <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
             Let's Connect
@@ -105,11 +112,15 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <Card className="border-border/50 bg-card/80 backdrop-blur-sm">
-            <CardHeader>
-              <CardTitle>Send a Message</CardTitle>
+          <Card className="border-border/50 bg-card/80 backdrop-blur-sm relative overflow-hidden group">
+            <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity duration-500"></div>
+            <CardHeader className="relative z-10">
+              <CardTitle className="flex items-center gap-2">
+                <Mail className="h-5 w-5 text-primary" />
+                Send a Message
+              </CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent className="relative z-10">
               <form className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-2">

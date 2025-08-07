@@ -5,15 +5,37 @@ import heroImage from "@/assets/hero-bg.jpg";
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-hero overflow-hidden">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-10 w-20 h-20 bg-primary/10 rounded-full animate-pulse"></div>
+        <div className="absolute top-40 right-20 w-16 h-16 bg-primary/5 rounded-full animate-bounce delay-300"></div>
+        <div className="absolute bottom-40 left-20 w-12 h-12 bg-primary/10 rounded-full animate-ping delay-700"></div>
+        <div className="absolute bottom-20 right-10 w-24 h-24 bg-primary/5 rounded-full animate-pulse delay-1000"></div>
+      </div>
+      
       {/* Background Image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
         style={{ backgroundImage: `url(${heroImage})` }}
       />
       
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center">
         <div className="animate-fade-in">
+          {/* Profile Image */}
+          <div className="mb-8 flex justify-center">
+            <div className="relative">
+              <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-primary/20 shadow-glow animate-glow">
+                <img 
+                  src="/lovable-uploads/10f78cc9-a3ec-4853-b98b-484fb8669af5.png" 
+                  alt="Tran Nhat Quy"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full border-2 border-background animate-pulse"></div>
+            </div>
+          </div>
+          
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
             Tran Nhat Quy
           </h1>

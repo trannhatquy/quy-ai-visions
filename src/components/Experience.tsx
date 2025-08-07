@@ -44,8 +44,11 @@ const Experience = () => {
   };
 
   return (
-    <section id="experience" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-6">
+    <section id="experience" className="py-20 bg-muted/30 relative overflow-hidden">
+      {/* Decorative Elements */}
+      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+      
+      <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
             Experience & Education

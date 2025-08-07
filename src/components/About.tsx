@@ -18,8 +18,12 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-background">
-      <div className="container mx-auto px-6">
+    <section id="about" className="py-20 bg-background relative overflow-hidden">
+      {/* Decorative Elements */}
+      <div className="absolute top-10 right-10 w-32 h-32 bg-gradient-primary opacity-5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-10 left-10 w-40 h-40 bg-primary/5 rounded-full blur-2xl"></div>
+      
+      <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
             About Me
@@ -36,12 +40,16 @@ const About = () => {
           {skills.map((skill, index) => (
             <Card 
               key={index} 
-              className="hover:shadow-card transition-all duration-300 hover:scale-105 border-border/50 bg-card/50 backdrop-blur-sm"
+              className="group hover:shadow-card transition-all duration-500 hover:scale-105 hover:-translate-y-2 border-border/50 bg-card/50 backdrop-blur-sm relative overflow-hidden"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <CardContent className="p-6">
-                <skill.icon className="h-12 w-12 text-primary mb-4" />
-                <h3 className="text-xl font-semibold mb-2">{skill.title}</h3>
+              {/* Card Glow Effect */}
+              <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity duration-500"></div>
+              <CardContent className="p-6 relative z-10">
+                <div className="p-3 rounded-full bg-primary/10 w-fit mb-4 group-hover:bg-primary/20 transition-colors">
+                  <skill.icon className="h-8 w-8 text-primary group-hover:scale-110 transition-transform" />
+                </div>
+                <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">{skill.title}</h3>
                 <p className="text-muted-foreground">{skill.description}</p>
               </CardContent>
             </Card>
